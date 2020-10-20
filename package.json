@@ -1,0 +1,23 @@
+{
+    "name": "sharex-vue",
+    "version": "0.0.1",
+    "description": "A ShareX server built from the ground up with a public API.",
+    "main": "index.js",
+    "authors": {
+        "name": "Alek Evans",
+        "email": "contact@alekeagle.com"
+    },
+    "repository": "https://github.com/AlekEagle/sharex-vue/sharex-vue",
+    "scripts": {
+        "dev": "vuepress dev src",
+        "build": "vuepress build src"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "vuepress": "^1.5.3"
+    },
+    "dependencies": {
+        "@vuepress/plugin-back-to-top": "^1.7.1",
+        "@vuepress/plugin-last-updated": "^1.7.1"
+    }
+}
