@@ -1,5 +1,9 @@
 # Response Structures
 
+## Table of Contents
+
+[[toc]]
+
 ## Normal User Structure
 
 ```json

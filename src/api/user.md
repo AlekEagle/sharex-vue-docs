@@ -2,6 +2,10 @@
 
 These are endpoints that a normal user will use at least once, if not several times during the usage of the service.
 
+## Table of Contents
+
+[[toc]]
+
 ## <Post/> /login/
 
 This endpoint returns the full user object who's username and password matches the one provided.
@@ -581,6 +585,110 @@ curl https://alekeagle.com/api/user/ \
         {
             "error": "Bad Request",
             "missing": ["email", "newPassword", "name"]
+        }
+        ```
+-   401 Unauthorized
+    -   ```json
+        {
+            "error": "No Token Provided"
+        }
+        ```
+
+:::
+
+## <Post/> /upload/ (Deprecated)
+
+:::danger Deprecated
+This endpoint is deprecated, if you are creating something that uses this endpoint, please consider using [/upload/](./user.md#upload).
+
+:::
+
+This API endpoint is an oddball, it is not prefixed with `/api`, its URL is only `https://alekeagle.me/upload/`.
+This endpoint is also an oddball, as it only returns plaintext, which is the link. This may change in the future.
+
+The max file size is 100MB, period.
+
+:::details Parameters
+
+-   Body
+    -   `file`
+        -   The file or text you want to upload to the server.
+
+:::
+
+:::details Example Request
+
+```sh
+curl https://alekeagle.me/upload/ \
+-X POST \
+-F "file=@/path/to/file.png" \
+-H "Authorization: MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI"
+```
+
+:::
+
+:::details Example Responses
+
+-   201 Created
+    -   ```
+        https://free-bruh-moments-at.alekeagle.me/1LkbQsLQIU.png
+        ```
+-   400 Bad Request
+    -   ```json
+        {
+            "error": "Bad Request",
+            "missing": ["file"]
+        }
+        ```
+-   401 Unauthorized
+    -   ```json
+        {
+            "error": "No Token Provided"
+        }
+        ```
+
+:::
+
+## <Post/> /upload/
+
+:::tip Replacement for deprecated endpoint
+
+This endpoint is a replacement for an endpoint that is deprecated and will be no longer used soon. Using this endpoint is preferred.
+
+:::
+
+This API endpoint is the replacement for the aforementioned deprecated /upload/ endpoint, it follows the endpoint definition being located at `https://alekeagle.me/api/upload/`.
+
+:::details Parameters
+
+-   Body
+    -   `file`
+        -   The file or text you want to upload to the server.
+
+:::
+
+:::details Example Request
+
+```sh
+curl https://alekeagle.me/api/upload/ \
+-X POST \
+-F "file=@/path/to/file.png" \
+-H "Authorization: MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI"
+```
+
+:::
+
+:::details Example Responses
+
+-   201 Created
+    -   ```
+        https://free-bruh-moments-at.alekeagle.me/1LkbQsLQIU.png
+        ```
+-   400 Bad Request
+    -   ```json
+        {
+            "error": "Bad Request",
+            "missing": ["file"]
         }
         ```
 -   401 Unauthorized

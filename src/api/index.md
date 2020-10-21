@@ -1,5 +1,9 @@
 # Basics
 
+## Table of Contents
+
+[[toc]]
+
 ## Base URL
 
 All endpoints are shortened by cutting out
@@ -40,6 +44,30 @@ All requests that require a body (POST, PATCH, PUT, etc..) accept these types of
 The server does **_NOT_** respect the `Accept` header, it will only return JSON.
 :::
 
+## Deprecation
+
+Any and all requests to deprecated endpoints will be responded to with `X-Deprecated` with a value pointing to the new API endpoint. Links to the associated documentation will be provided in `X-Deprecated-Documentation`.
+
+:::details Example
+
+Request:
+
+```sh
+curl https://alekeagle.me/upload/ \
+-X POST \
+-F "file=@/path/to/file.png" \
+-H "Authorization: MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI"
+```
+
+Headers Returned:
+
+```http
+X-Deprecated: https://alekeagle.me/api/upload/
+X-Deprecated-Documentation: https://docs.alekeagle.me/api/user.html#upload
+```
+
+:::
+
 ## Ratelimits
 
 All API requests have ratelimits, using the:
@@ -58,7 +86,7 @@ If you need `X-Ratelimit-Limit` raised, please [email AlekEagle](mailto:contact@
 
 When parameters are defined for a request, they are required unless explicitly stated otherwise.
 
-## <Any/> /
+## <Any/> / (https://alekeagle.me/api/)
 
 An example API endpoint used to ensure the API is online and responsive. Also returns the current API version. This API endpoint does NOT require authorization.
 
@@ -68,7 +96,7 @@ An example API endpoint used to ensure the API is online and responsive. Also re
 
 ```sh
 curl https://alekeagle.me/api/ \
--X PATCH
+-X GET
 ```
 
 :::

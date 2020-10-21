@@ -49,17 +49,15 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/reference/': [
+      '/api/': [
         {
           title: 'Reference',
           collapsable: true,
           children: [
-            '',
+            'reference',
             'structures'
           ]
-        }
-      ],
-      '/api/': [
+        },
         {
           title: 'API',
           collapsable: true,
