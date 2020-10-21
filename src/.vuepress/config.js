@@ -37,7 +37,7 @@ module.exports = {
     nav: [
       {
         text: 'Reference',
-        link: '/reference/'
+        link: '/api/reference.html'
       },
       {
         text: 'API',
