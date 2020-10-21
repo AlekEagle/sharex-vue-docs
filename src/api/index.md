@@ -8,7 +8,7 @@ All endpoints are shortened by cutting out
 https://alekeagle.me/api
 ```
 
-just to make things a little bit more tidy
+just to make things a little bit more tidy. :)
 
 ## Making Requests
 
@@ -23,6 +23,22 @@ curl https://alekeagle.me/api/ \
 -X GET \
 -H "Authorization: MTYwMDE5OTkxODk4MA.NjQ4.V1BnVFJzXzJvM3RLczdadkRpMmRtQmxm"
 ```
+
+All requests that require a body (POST, PATCH, PUT, etc..) accept these types of body:
+
+:::details Accepts
+
+-   `multipart/form-data`
+
+-   `application/x-www-form-urlencoded`
+
+-   `application/json`
+
+:::
+
+:::danger Accept Header
+The server does **_NOT_** respect the `Accept` header, it will only return JSON.
+:::
 
 ## Ratelimits
 
@@ -42,7 +58,7 @@ If you need `X-Ratelimit-Limit` raised, please [email AlekEagle](mailto:contact@
 
 When parameters are defined for a request, they are required unless explicitly stated otherwise.
 
-## <any/> /
+## <Any/> /
 
 An example API endpoint used to ensure the API is online and responsive. Also returns the current API version. This API endpoint does NOT require authorization.
 

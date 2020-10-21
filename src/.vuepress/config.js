@@ -28,9 +28,10 @@ module.exports = {
    */
   themeConfig: {
     repo: 'AlekEagle/sharex-vue-docs',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    editLinks: true,
+    docsDir: 'src',
+    editLinkText: 'Edit this page on GitHub',
+    smoothScroll: true,
     lastUpdated: true,
     logo: 'https://alekeagle.me/img/me_irl.webp',
     nav: [

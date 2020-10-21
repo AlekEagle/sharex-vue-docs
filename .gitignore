@@ -1,2 +1,4 @@
 node_modules
 src/brew-coffee
+src/.vuepress/docs
+src/.vuepress/dist
