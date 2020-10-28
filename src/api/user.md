@@ -14,15 +14,15 @@ This endpoint does **NOT** need authorization.
 
 :::details Parameters
 
--   Body
+- Body
 
-    -   `name`
+  - `name`
 
-        -   The user's username or email
+    - The user's username or email
 
-    -   `password`
+  - `password`
 
-        -   The user's password
+    - The user's password
 
 :::
 
@@ -39,35 +39,35 @@ curl https://alekeagle.me/api/login/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "id": "1603135823114",
-            "username": "joe",
-            "displayName": "joe",
-            "email": "joe@example.com",
-            "staff": "",
-            "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
-            "domain": "alekeagle.me",
-            "subdomain": "",
-            "bannedAt": null,
-            "createdAt": "2020-10-19T19:30:23.114Z",
-            "updatedAt": "2020-10-19T22:37:50.626Z"
-        }
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["name", "password"]
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Account"
-        }
-        ```
+- 200 OK
+  - ```json
+    {
+      "id": "1603135823114",
+      "username": "joe",
+      "displayName": "joe",
+      "email": "joe@example.com",
+      "staff": "",
+      "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
+      "domain": "alekeagle.me",
+      "subdomain": "",
+      "bannedAt": null,
+      "createdAt": "2020-10-19T19:30:23.114Z",
+      "updatedAt": "2020-10-19T22:37:50.626Z"
+    }
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["name", "password"]
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Account"
+    }
+    ```
 
 :::
 
@@ -89,29 +89,29 @@ curl https://alekeagle.me/api/user/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "id": "1603135823114",
-            "username": "joe",
-            "displayName": "joe",
-            "email": "joe@example.com",
-            "staff": "",
-            "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
-            "domain": "alekeagle.me",
-            "subdomain": "",
-            "bannedAt": null,
-            "createdAt": "2020-10-19T19:30:23.114Z",
-            "updatedAt": "2020-10-19T22:37:50.626Z"
-        }
-        ```
--   401 Unauthorized
+- 200 OK
+  - ```json
+    {
+      "id": "1603135823114",
+      "username": "joe",
+      "displayName": "joe",
+      "email": "joe@example.com",
+      "staff": "",
+      "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
+      "domain": "alekeagle.me",
+      "subdomain": "",
+      "bannedAt": null,
+      "createdAt": "2020-10-19T19:30:23.114Z",
+      "updatedAt": "2020-10-19T22:37:50.626Z"
+    }
+    ```
+- 401 Unauthorized
 
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
 
@@ -121,13 +121,13 @@ This endpoint creates a new user with the provided account details. It doesn't n
 
 :::details Parameters
 
--   Body
-    -   `name`
-        -   The username for the user that will be created.
-    -   `email`
-        -   The email to be linked with the user created.
-    -   `password`
-        -   The password for the account that will be created.
+- Body
+  - `name`
+    - The username for the user that will be created.
+  - `email`
+    - The email to be linked with the user created.
+  - `password`
+    - The password for the account that will be created.
 
 :::
 
@@ -143,36 +143,36 @@ curl https://alekeagle.me/api/user/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "id": "1603135823114",
-            "username": "joe",
-            "displayName": "joe",
-            "email": "joe@example.com",
-            "staff": "",
-            "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
-            "domain": "alekeagle.me",
-            "subdomain": "",
-            "bannedAt": null,
-            "createdAt": "2020-10-19T19:30:23.114Z",
-            "updatedAt": "2020-10-19T22:37:50.626Z"
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "User already exists",
-            "with": ["name", "email"]
-        }
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["name", "email", "password"]
-        }
-        ```
+- 200 OK
+  - ```json
+    {
+      "id": "1603135823114",
+      "username": "joe",
+      "displayName": "joe",
+      "email": "joe@example.com",
+      "staff": "",
+      "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
+      "domain": "alekeagle.me",
+      "subdomain": "",
+      "bannedAt": null,
+      "createdAt": "2020-10-19T19:30:23.114Z",
+      "updatedAt": "2020-10-19T22:37:50.626Z"
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "User already exists",
+      "with": ["name", "email"]
+    }
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["name", "email", "password"]
+    }
+    ```
 
 :::
 
@@ -186,9 +186,9 @@ This and many other requests use what are called Path Parameters, which can be f
 
 :::details Parameters
 
--   Path
-    -   `id`
-        -   The ID of the user who's data you want to obtain.
+- Path
+  - `id`
+    - The ID of the user who's data you want to obtain.
 
 :::
 
@@ -204,29 +204,32 @@ curl https://alekeagle.me/api/user/1603135823114/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "id": "1603135823114",
-            "username": "joe",
-            "displayName": "joe",
-            "staff": "",
-            "createdAt": "2020-10-19T19:30:23.114Z",
-            "bannedAt": null
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
--   403 Forbidden
-    -   ```json
-        {
-            "error": "Missing Permissions"
-        }
-        ```
+- 200 OK
+  - ```json
+    {
+      "id": "1603135823114",
+      "username": "joe",
+      "displayName": "joe",
+      "staff": "",
+      "createdAt": "2020-10-19T19:30:23.114Z",
+      "updatedAt": "2020-10-19T19:30:23.114Z",
+      "domain": "alekeagle.me",
+      "subdomain": "",
+      "bannedAt": null
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
+- 403 Forbidden
+  - ```json
+    {
+      "error": "Missing Permissions"
+    }
+    ```
 
 :::
 
@@ -236,9 +239,9 @@ This deletes the user making the request.
 
 :::details Parameters
 
--   Body
-    -   `password`
-        -   The password to the user account to confirm identity.
+- Body
+  - `password`
+    - The password to the user account to confirm identity.
 
 :::
 
@@ -256,27 +259,27 @@ curl https://alekeagle.me/api/user/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "success": "true"
-        }
-        ```
--   400 Bad Request
+- 200 OK
+  - ```json
+    {
+      "success": "true"
+    }
+    ```
+- 400 Bad Request
 
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["password"]
-        }
-        ```
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["password"]
+    }
+    ```
 
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
 
@@ -286,9 +289,9 @@ This will regenerate the user's API token that is associated with the user makin
 
 :::details Parameters
 
--   Body
-    -   `password`
-        -   The password of the user making the request to confirm their identity.
+- Body
+  - `password`
+    - The password of the user making the request to confirm their identity.
 
 :::
 
@@ -306,25 +309,25 @@ curl https://alekeagle.me/api/user/token/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "token": "MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI"
-        }
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["password"]
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "Invalid Password"
-        }
-        ```
+- 200 OK
+  - ```json
+    {
+      "token": "MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI"
+    }
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["password"]
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "Invalid Password"
+    }
+    ```
 
 :::
 
@@ -346,54 +349,54 @@ curl https://alekeagle.me/api/domains/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        [
-            {
-                "domain": "alekeagle.me",
-                "allowsSubdomains": true,
-                "createdAt": "2019-10-22T23:54:41.974Z",
-                "updatedAt": "2019-10-22T23:54:41.974Z"
-            },
-            {
-                "domain": "cum-in.me",
-                "allowsSubdomains": true,
-                "createdAt": "2019-10-22T23:54:41.974Z",
-                "updatedAt": "2019-10-22T23:54:41.974Z"
-            },
-            {
-                "domain": "cum.ninja",
-                "allowsSubdomains": true,
-                "createdAt": "2019-10-22T23:54:41.974Z",
-                "updatedAt": "2019-10-22T23:54:41.974Z"
-            },
-            {
-                "domain": "ohbiff.tech",
-                "allowsSubdomains": false,
-                "createdAt": "2019-10-22T23:54:41.974Z",
-                "updatedAt": "2019-10-22T23:54:41.974Z"
-            },
-            {
-                "domain": "spinjitzu.xyz",
-                "allowsSubdomains": false,
-                "createdAt": "2019-10-22T23:54:41.974Z",
-                "updatedAt": "2019-10-22T23:54:41.974Z"
-            },
-            {
-                "domain": "became.gay",
-                "allowsSubdomains": true,
-                "createdAt": "2020-09-17T01:39:02.283Z",
-                "updatedAt": "2020-09-17T01:39:02.283Z"
-            }
-        ]
-        ```
--   401 Unauthorized
+- 200 OK
+  - ```json
+    [
+      {
+        "domain": "alekeagle.me",
+        "allowsSubdomains": true,
+        "createdAt": "2019-10-22T23:54:41.974Z",
+        "updatedAt": "2019-10-22T23:54:41.974Z"
+      },
+      {
+        "domain": "cum-in.me",
+        "allowsSubdomains": true,
+        "createdAt": "2019-10-22T23:54:41.974Z",
+        "updatedAt": "2019-10-22T23:54:41.974Z"
+      },
+      {
+        "domain": "cum.ninja",
+        "allowsSubdomains": true,
+        "createdAt": "2019-10-22T23:54:41.974Z",
+        "updatedAt": "2019-10-22T23:54:41.974Z"
+      },
+      {
+        "domain": "ohbiff.tech",
+        "allowsSubdomains": false,
+        "createdAt": "2019-10-22T23:54:41.974Z",
+        "updatedAt": "2019-10-22T23:54:41.974Z"
+      },
+      {
+        "domain": "spinjitzu.xyz",
+        "allowsSubdomains": false,
+        "createdAt": "2019-10-22T23:54:41.974Z",
+        "updatedAt": "2019-10-22T23:54:41.974Z"
+      },
+      {
+        "domain": "became.gay",
+        "allowsSubdomains": true,
+        "createdAt": "2020-09-17T01:39:02.283Z",
+        "updatedAt": "2020-09-17T01:39:02.283Z"
+      }
+    ]
+    ```
+- 401 Unauthorized
 
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
 
@@ -403,11 +406,11 @@ This will change the domain and subdomain combination of the user who made the r
 
 :::details Parameters
 
--   Body
-    -   `domain`
-        -   A valid domain to be changed to.
-    -   `subdomain` _optional_
-        -   A string for the subdomain or left blank or null.
+- Body
+  - `domain`
+    - A valid domain to be changed to.
+  - `subdomain` _optional_
+    - A string for the subdomain or left blank or null.
 
 :::
 
@@ -425,26 +428,26 @@ curl https://alekeagle.me/api/user/domain/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "domain": "alekeagle.me",
-            "subdomain": "free-bruh-moments-at"
-        }
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["domain"]
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+- 200 OK
+  - ```json
+    {
+      "domain": "alekeagle.me",
+      "subdomain": "free-bruh-moments-at"
+    }
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["domain"]
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
 
@@ -454,15 +457,15 @@ Update the requesting user's information.
 
 :::details Parameters
 
--   Body
-    -   `name` _optional_
-        -   The new username for the user.
-    -   `email` _optional_
-        -   The new email address for the user.
-    -   `newPassword` _optional_
-        -   A new password for the user's account.
-    -   `password`
-        -   The user's password for the account to confirm identity.
+- Body
+  - `name` _optional_
+    - The new username for the user.
+  - `email` _optional_
+    - The new email address for the user.
+  - `newPassword` _optional_
+    - A new password for the user's account.
+  - `password`
+    - The user's password for the account to confirm identity.
 
 :::
 
@@ -480,36 +483,36 @@ curl https://alekeagle.com/api/user/ \
 
 :::details Example Responses
 
--   200 OK
-    -   ```json
-        {
-            "id": "1603135823114",
-            "username": "joe",
-            "displayName": "joe",
-            "email": "joe@example.net",
-            "staff": "",
-            "password": null,
-            "apiToken": "MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI",
-            "domain": "alekeagle.me",
-            "subdomain": "free-bruh-moments-at",
-            "bannedAt": null,
-            "createdAt": "2020-10-19T19:30:23.114Z",
-            "updatedAt": "2020-10-20T23:53:38.462Z"
-        }
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["email", "newPassword", "name"]
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+- 200 OK
+  - ```json
+    {
+      "id": "1603135823114",
+      "username": "joe",
+      "displayName": "joe",
+      "email": "joe@example.net",
+      "staff": "",
+      "password": null,
+      "apiToken": "MTYwMzEzNTgyMzExNA.NDk1.OGRxQm9kUXltckR3SzRLUmxGQkZ1d0VI",
+      "domain": "alekeagle.me",
+      "subdomain": "free-bruh-moments-at",
+      "bannedAt": null,
+      "createdAt": "2020-10-19T19:30:23.114Z",
+      "updatedAt": "2020-10-20T23:53:38.462Z"
+    }
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["email", "newPassword", "name"]
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
 
@@ -527,9 +530,9 @@ The max file size is 100MB, period.
 
 :::details Parameters
 
--   Body
-    -   `file`
-        -   The file or text you want to upload to the server.
+- Body
+  - `file`
+    - The file or text you want to upload to the server.
 
 :::
 
@@ -546,23 +549,23 @@ curl https://alekeagle.me/upload/ \
 
 :::details Example Responses
 
--   201 Created
-    -   ```
-        https://free-bruh-moments-at.alekeagle.me/1LkbQsLQIU.png
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["file"]
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+- 201 Created
+  - ```
+    https://free-bruh-moments-at.alekeagle.me/1LkbQsLQIU.png
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["file"]
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
 
@@ -578,9 +581,9 @@ This API endpoint is the replacement for the aforementioned deprecated /upload/ 
 
 :::details Parameters
 
--   Body
-    -   `file`
-        -   The file or text you want to upload to the server.
+- Body
+  - `file`
+    - The file or text you want to upload to the server.
 
 :::
 
@@ -597,22 +600,22 @@ curl https://alekeagle.me/api/upload/ \
 
 :::details Example Responses
 
--   201 Created
-    -   ```
-        https://free-bruh-moments-at.alekeagle.me/1LkbQsLQIU.png
-        ```
--   400 Bad Request
-    -   ```json
-        {
-            "error": "Bad Request",
-            "missing": ["file"]
-        }
-        ```
--   401 Unauthorized
-    -   ```json
-        {
-            "error": "No Token Provided"
-        }
-        ```
+- 201 Created
+  - ```
+    https://free-bruh-moments-at.alekeagle.me/1LkbQsLQIU.png
+    ```
+- 400 Bad Request
+  - ```json
+    {
+      "error": "Bad Request",
+      "missing": ["file"]
+    }
+    ```
+- 401 Unauthorized
+  - ```json
+    {
+      "error": "No Token Provided"
+    }
+    ```
 
 :::
