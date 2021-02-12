@@ -1,13 +1,13 @@
 <template>
-    <p class="any">any</p>
+  <p class="any">any</p>
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>
 
 <style>
-p.any {
+  p.any {
     display: inline-block;
     border-radius: 6px;
     font-weight: 700;
@@ -17,5 +17,5 @@ p.any {
     margin: 0 4px;
     background-color: #8a8a8a;
     text-shadow: 0 1px 0 #0000001a;
-}
+  }
 </style>

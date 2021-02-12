@@ -1,13 +1,13 @@
 <template>
-    <p class="post">post</p>
+  <p class="post">post</p>
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>
 
 <style>
-p.post {
+  p.post {
     display: inline-block;
     border-radius: 6px;
     font-weight: 700;
@@ -17,5 +17,5 @@ p.post {
     margin: 0 4px;
     background-color: #49cc90;
     text-shadow: 0 1px 0 #0000001a;
-}
+  }
 </style>

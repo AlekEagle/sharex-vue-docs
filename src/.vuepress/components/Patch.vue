@@ -1,13 +1,13 @@
 <template>
-    <p class="patch">patch</p>
+  <p class="patch">patch</p>
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>
 
 <style>
-p.patch {
+  p.patch {
     display: inline-block;
     border-radius: 6px;
     font-weight: 700;
@@ -17,5 +17,5 @@ p.patch {
     margin: 0 4px;
     background-color: #eaea00;
     text-shadow: 0 1px 0 #0000001a;
-}
+  }
 </style>

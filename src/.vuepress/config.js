@@ -1,10 +1,10 @@
-const { description } = require("../../package");
+const { description } = require('../../package');
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "alekeagle.me ShareX API",
+  title: 'Cumulonimbus API',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -16,15 +16,15 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ["meta", { name: "theme-color", content: "#3eaf7c" }],
-    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" }
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }
     ],
     [
-      "meta",
-      { name: "og:image", content: "https://alekeagle.me/img/me_irl.webp" }
+      'meta',
+      { name: 'og:image', content: 'https://alekeagle.me/img/me_irl.webp' }
     ]
   ],
 
@@ -34,38 +34,38 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: "AlekEagle/sharex-vue-docs",
+    repo: 'AlekEagle/sharex-vue-docs',
     editLinks: true,
-    docsDir: "src",
-    editLinkText: "Edit this page on GitHub",
+    docsDir: 'src',
+    editLinkText: 'Edit this page on GitHub',
     smoothScroll: true,
     lastUpdated: true,
-    logo: "https://alekeagle.me/img/me_irl.webp",
+    logo: 'https://alekeagle.me/img/me_irl.webp',
     nav: [
       {
-        text: "Reference",
-        link: "/api/reference.html"
+        text: 'Reference',
+        link: '/api/reference.html'
       },
       {
-        text: "API",
-        link: "/api/"
+        text: 'API',
+        link: '/api/'
       },
       {
-        text: "alekeagle.me",
-        link: "https://alekeagle.me/"
+        text: 'alekeagle.me',
+        link: 'https://alekeagle.me/'
       }
     ],
     sidebar: {
-      "/api/": [
+      '/api/': [
         {
-          title: "Reference",
+          title: 'Reference',
           collapsable: true,
-          children: ["reference", "structures"]
+          children: ['reference', 'structures']
         },
         {
-          title: "API",
+          title: 'API',
           collapsable: true,
-          children: ["", "user", "admin"]
+          children: ['', 'user', 'admin']
         }
       ]
     }
@@ -74,5 +74,5 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ["@vuepress/back-to-top", "@vuepress/last-updated"]
+  plugins: ['@vuepress/back-to-top', '@vuepress/last-updated']
 };

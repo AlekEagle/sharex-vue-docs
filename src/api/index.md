@@ -32,11 +32,11 @@ All requests that require a body (POST, PATCH, PUT, etc..) accept these types of
 
 :::details Accepts
 
--   `multipart/form-data`
+- `multipart/form-data`
 
--   `application/x-www-form-urlencoded`
+- `application/x-www-form-urlencoded`
 
--   `application/json`
+- `application/json`
 
 :::
 
@@ -72,9 +72,9 @@ X-Deprecated-Documentation: https://docs.alekeagle.me/api/user.html#upload
 
 All API requests have ratelimits, using the:
 
--   `X-Ratelimit-Limit`
--   `X-Ratelimit-Remaining`
--   `X-Ratelimit-Reset`
+- `X-Ratelimit-Limit`
+- `X-Ratelimit-Remaining`
+- `X-Ratelimit-Reset`
 
 headers to determine how you should handle ratelimits on your end. `X-Ratelimit-Limit` is how many requests per window you have, `X-Ratelimit-Remaining` is how many you have left from the current window, and `X-Ratelimit-Reset` is the timestamp in seconds at which `X-Ratelimit-Remaining` resets.
 
@@ -105,8 +105,8 @@ curl https://alekeagle.me/api/ \
 
 ```json
 {
-    "hello": "world",
-    "version": "1.0.0"
+  "hello": "world",
+  "version": "1.0.0"
 }
 ```
 
