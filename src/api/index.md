@@ -18,7 +18,7 @@ just to make things a little bit more tidy. :)
 
 All requests, unless explicitly stated otherwise, require authorization. Authorization is provided in the form of the `Authorization` header with a token from your account.
 ::: tip Note
-If you need to know how to get your token, you can find it at [Reference > Getting Your Token](/reference/#getting-your-token).
+If you need to know how to get your token, you can find it at [Reference > Getting Your Token](./reference.md/#getting-your-token).
 :::
 **Example:**
 
