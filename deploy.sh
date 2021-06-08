@@ -1,1 +1,1 @@
-git pull ; npm run build ; rm -rf ../sharex-vue/docs/* ; mv -f src/.vuepress/dist/ ../sharex-vue/docs/
+sudo ln -s $(pwd)/src/.vuepress/dist /var/www-data-docs

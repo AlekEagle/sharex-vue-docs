@@ -24,7 +24,7 @@ module.exports = {
     ],
     [
       'meta',
-      { name: 'og:image', content: 'https://alekeagle.me/img/me_irl.webp' }
+      { name: 'og:image', content: 'https://alekeagle.me/img/Cumulonimbus.webp' }
     ]
   ],
 
@@ -40,7 +40,7 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     smoothScroll: true,
     lastUpdated: true,
-    logo: 'https://alekeagle.me/img/me_irl.webp',
+    logo: 'https://alekeagle.me/img/Cumulonimbus.webp',
     nav: [
       {
         text: 'Reference',
@@ -65,7 +65,7 @@ module.exports = {
         {
           title: 'API',
           collapsable: true,
-          children: ['', 'user', 'admin']
+          children: ['', 'user', 'admin', 'domains']
         }
       ]
     }

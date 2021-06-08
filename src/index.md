@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://alekeagle.me/img/me_irl.webp
+heroImage: https://alekeagle.me/img/Cumulonimbus.webp
 tagline: A ShareX server built from the ground up with a public API.
 actionText: Get Started →
 actionLink: /api/

@@ -1,9 +1,5 @@
 # Common References
 
-## Table of Contents
-
-[[toc]]
-
 ## Base URL
 
 ```

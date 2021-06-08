@@ -1,40 +1,18 @@
 # Response Structures
 
-## Table of Contents
-
-[[toc]]
-
 ## Normal User Structure
 
 ```json
 {
-  "id": "1603135823114",
-  "username": "joe",
-  "displayName": "joe",
-  "staff": "",
-  "createdAt": "2020-10-19T19:30:23.114Z",
-  "updatedAt": "2020-10-19T22:37:50.626Z",
-  "bannedAt": null,
-  "domain": "alekeagle.me",
-  "subdomain": ""
-}
-```
-
-## Private/Self User Structure
-
-```json
-{
-  "id": "1603135823114",
-  "username": "joe",
-  "displayName": "joe",
-  "email": "joe@example.com",
-  "staff": "",
-  "apiToken": "MTYwMzEzNTgyMzExNA.NjI1.dUJxTGZndVZGU0UzNHJOVEpkdUFaeUdV",
-  "domain": "alekeagle.me",
-  "subdomain": "",
-  "bannedAt": null,
-  "createdAt": "2020-10-19T19:30:23.114Z",
-  "updatedAt": "2020-10-19T22:37:50.626Z"
+  "id":"1623088043642",
+  "username":"joe",
+  "displayName":"joe",
+  "email":"joe@joe.joe",
+  "domain":"alekeagle.me",
+  "subdomain":"",
+  "staff":"",
+  "createdAt":"2021-06-07T17:47:23.642Z","updatedAt":"2021-06-07T17:47:23.752Z",
+  "bannedAt":null
 }
 ```
 

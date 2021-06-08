@@ -1,9 +1,5 @@
 # Basics
 
-## Table of Contents
-
-[[toc]]
-
 ## Base URL
 
 All endpoints are shortened by cutting out
